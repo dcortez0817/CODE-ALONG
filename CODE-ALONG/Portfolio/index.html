@@ -7,6 +7,38 @@ Most recent revision:
 <html lang="en">
     <head>
         <title>Darien Cortez</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <style>
+            caption{
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: 8px;
+            }
+
+            table{
+                width: 90%;
+                margin: auto;
+            }
+
+            table, th, td {
+                border: 1px solid #0d1f2d;
+                border-collapse: collapse;
+                padding: 5px 10px;
+            }
+
+            tr{
+                height: 30px;
+            }
+
+            thead{
+                background-color: #546a7b;
+                color: #f2eded;
+            }
+
+            tbody tr:nth-child(odd){
+                background-color: #e4c3ad; 
+            }
+        </style>
     </head>
 
     <body>
@@ -14,12 +46,10 @@ Most recent revision:
             <h1>Portfolio for Darien Cortez</h1>
         </header>
 
-        <hr />
         <!-- We need to add links to projects.html, contact.html, and testimonials.html -->
         <nav>
             <p><a href="projects.html">Projects</a> | <a href="contact.html">Contact Me</a> | <a href="testimonial.html">Testimonials</a></p>
         </nav>
-        <hr />
 
         <section>
             <article id="about">
@@ -54,42 +84,46 @@ Most recent revision:
                 <img src="Images/cropped-compscience.jpg" width="400" style="border-color: whitesmoke" border="1"/>
                 <table>
                         <caption>Employment History</caption>
-                        <tr>
-                            <th>Years of Employment</th>
-                            <th>Company</th>
-                            <th>Title</th>
-                            <th>Location</th>
-                        </tr>
-                        <tr>
-                            <td>September 2017 – May 2019</td>
-                            <td>Midwestern State University Admissions Office</td>
-                            <td>System Manager - Student Assistant</td>
-                            <td>Wichita Falls, TX</td>
-                        </tr>
-                        <tr>
-                            <td>June 2018 – August 2018</td>
-                            <td>Nebraska Furniture Mart/ Ford Storage</td>
-                            <td>Delivery Helper</td>
-                            <td>The Colony, TX</td>
-                        </tr>
-                        <tr>
-                            <td>May 2016 – January 2018</td>
-                            <td>Great Wolf Lodge</td>
-                            <td>Lifeguard - seasonal</td>
-                            <td>Grapevine, TX</td>
-                        </tr> 
-                        <tr>
-                            <td>December 2015 – January 2016</td>
-                            <td>United Parcel Service (UPS)</td>
-                            <td>Driver Helper</td>
-                            <td>Flower Mound, TX</td>
-                        </tr>
-                        <tr>
-                            <td>October 2014 – July 2015</td>
-                            <td>Boston Market</td>
-                            <td>Cashier</td>
-                            <td>Hurst, TX</td>
-                        </tr>  
+                        <thead>
+                            <tr>
+                                <th>Years of Employment</th>
+                                <th>Company</th>
+                                <th>Title</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>September 2017 – May 2019</td>
+                                <td>Midwestern State University Admissions Office</td>
+                                <td>System Manager - Student Assistant</td>
+                                <td>Wichita Falls, TX</td>
+                            </tr>
+                            <tr>
+                                <td>June 2018 – August 2018</td>
+                                <td>Nebraska Furniture Mart/ Ford Storage</td>
+                                <td>Delivery Helper</td>
+                                <td>The Colony, TX</td>
+                            </tr>
+                            <tr>
+                                <td>May 2016 – January 2018</td>
+                                <td>Great Wolf Lodge</td>
+                                <td>Lifeguard - seasonal</td>
+                                <td>Grapevine, TX</td>
+                            </tr> 
+                            <tr>
+                                <td>December 2015 – January 2016</td>
+                                <td>United Parcel Service (UPS)</td>
+                                <td>Driver Helper</td>
+                                <td>Flower Mound, TX</td>
+                            </tr>
+                            <tr>
+                                <td>October 2014 – July 2015</td>
+                                <td>Boston Market</td>
+                                <td>Cashier</td>
+                                <td>Hurst, TX</td>
+                            </tr>  
+                        </tbody>
                     </table>
                     <!--
                 <p>
@@ -161,7 +195,6 @@ Most recent revision:
         </section>
 
         <footer>
-            <hr />
             <p>&copy; 2019 Darien Cortez. All rights reserved.</p>
         </footer>
     </body>
