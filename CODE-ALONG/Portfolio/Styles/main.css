@@ -4,15 +4,17 @@ Date Created: 07/7/2019
 Most recent revision: 
 */
 
-body {
-    background-color: #fcf6f6;
+body{
+    background-color: whitesmoke;
     font-family: arial, helvetica, sans-serif;
-    color: #0d1f2d
+    color: #0d1f2d;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header, footer {
+header, footer{
     background-color: #5b7d87;
-    color: #fcf6f6;
+    color: whitesmoke;
     height: 100px;
     text-align: center;
     padding: 30px 10px 20px 10px;
@@ -22,8 +24,51 @@ h1{
     font-size: 2.5em;
 }
 
-nav {
+nav{
     border-top: 3px dashed #546a7b;
     border-bottom: 3px dashed #546a7b;
     margin-top: 4px;
 }
+
+.clear-float{
+    clear:both;
+}
+
+article img{
+    float: left;
+}
+
+.right-content{
+    float: left;
+}
+
+article{
+    margin-bottom: 16px;
+}
+
+nav a{
+    background-color: #5b7d87;
+    color: whitesmoke;
+    padding: 8px;
+    border: thin solid #0d1f2d;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 20px;
+    width: 100px;
+    float: left;
+}
+
+nav a:visited {
+    color: purple; 
+}
+
+nav a:hover {
+    background-color: whitesmoke;
+    color: #5b7d87; 
+}
+
+nav a:active {
+    font-weight: bold;
+}
+
