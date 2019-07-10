@@ -6,44 +6,91 @@ Most recent revision:
 -->
 <html lang="en">
     <head>
+        <!-- meta tags provide information about the contents of the web page -->
+        <!-- charset="utf-8" ensures that the browser displays the bootstrap fonts and modifies the viewport-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        
         <title>Home Page</title>
+        
+        <!-- Bootstrap CDN from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
+        <style>
+            .description{
+                background-color: rgb(218, 94, 41, 0.7);
+                border-radius: 5%;
+                padding: 2%;
+            }
+        </style>
     </head>
     
-    <body>
+    <body>   
         <!--header-->
         <header>
-            <h1>Zetroc's Kitchen</h1>
+            <span class="logo">Zetroc's Kitchen</span>
         </header>
 
-        <!--navigation bar-->
-        <hr />
-        <nav>
-            <p><a href="">Home</a> <a href="menu.html">Menu</a> <a href="contact.html">Contact Us</a></p>
-        </nav>
-        <hr />
-
-        <!--middle content-->
-        <!--free usage of image from this site: https://pxhere.com/en/photo/39121-->
-        <img src="Images/cover-image.jpg" height="400"/>
-        <h4><em>Our Story</em></h4>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Pharetra convallis posuere morbi leo urna molestie at. Ligula ullamcorper malesuada 
-            proin libero. Nunc sed blandit libero volutpat sed cras. Ac placerat vestibulum lectus mauris ultrices eros 
-            in cursus turpis. Vitae sapien pellentesque habitant morbi tristique senectus. Eget duis at tellus at urna 
-            condimentum mattis pellentesque. Lorem ipsum dolor sit amet consectetur adipiscing. Justo eget magna fermentum 
-            iaculis eu. Nec nam aliquam sem et tortor consequat id. Tellus elementum sagittis vitae et leo duis ut diam quam. 
-            Penatibus et magnis dis parturient montes nascetur ridiculus. Sit amet porttitor eget dolor morbi. Massa vitae tortor 
-            condimentum lacinia. Ultrices neque ornare aenean euismod elementum nisi. Tortor condimentum lacinia quis vel eros donec 
-            ac. At elementum eu facilisis sed odio morbi quis. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. 
-            Consectetur libero id faucibus nisl tincidunt eget nullam non nisi.
-        </p>
+        <div class="page-background">
+            <!--navigation bar-->
+            <nav>
+                <a class="btn" href="index.html"><span class="glyphicon glyphicon-home"></span>Home</a>
+                <a class="btn" href="menu.html">Menu</a> 
+                <a class="btn" href="contact.html">Contact Us</a>
+            </nav>
+            
+            <!--middle content-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-1"></div>
+                <!--free usage of image from this site: https://pxhere.com/en/photo/39121-->
+                    <div class="col-10">
+                        <img src="Images/cover-image.jpg" class="img-fluid" style="border-color: whitesmoke; border: solid .7em;"/>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                
+                <div class="row" style="margin-top:3%;">
+                    <div class="col-1"></div>
+                    <div class="col-10 description">
+                        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><em>Our Story</em></h2>
+                        <p>
+                            It all started in the summer of 2005. As twenty year old college student Douglas Zetroc moseyed around the big city of Dallas
+                            with some friends in search of a hangout spot, it occurred to him that there weren't many restaurants that were suitable for
+                            multiple parts of the day. He had this big idea to open a restaurant to offer a multipurpose menu and environment, but did not
+                            have any idea where to begin. So he turned to his childhood buddies and his parents to make his dream a reality, and a year later
+                            arose the great spot known as Zetroc's!
+                        </p>
+                        <p>
+                            Named after it's founder, Douglas Zetroc, Zetroc's presents itself as an old fashioned diner by day and a social spot by night!
+                            Making it fitting for all ages or functions. Whether it be a lunch break, brunch date, or dinner event &ndash; Zetroc's is your spot! 
+                            From our <em>American Classic </em> burger to our <em>All-Time Favorite</em> Italian Sausage and Peppers dish, our menu offers a variety 
+                            of rich-in-flavor meals that will surely satisfy your taste buds. Even our house salad has some swagger to it.
+                        </p>
+                        <p>
+                            Zetroc envisioned a place created by the people it welcomed. Our restaurant is whatever our customers make of it. It could be the place
+                            you had your first date, the place you meet up with your friends everyday on your lunch break, or the place you stumble into at night
+                            while moseying around the city with some friends. Zetroc's small town feel gives customers an out from the hectic energy of the big city
+                            of Dallas.
+                        </p>
+                        <p>
+                            Hope to see you soon!
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
 
         <!--footer-->
         <footer>
-            <hr />
             <p>322 Bumblebee Ln, Dallas, TX 75201</p>
             <p>214-938-7627</p>
         </footer>
+    
+        <!-- CDN links from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>

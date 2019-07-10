@@ -6,99 +6,181 @@ Most recent revision:
 -->
 <html lang="en">
     <head>
+        <!-- meta tags provide information about the contents of the web page -->
+        <!-- charset="utf-8" ensures that the browser displays the bootstrap fonts and modifies the viewport-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        
         <title>Menu</title>
+        
+        <!-- Bootstrap CDN from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
+        <style>
+            .menu-option{
+                text-align: center;
+                background-color: rgb(218, 94, 41, 0.7);
+                color: whitesmoke;
+                border: solid 3px rgba(217, 210, 196, 0.7);
+                margin: 4%;
+            }
+
+            .top{
+                font-size: 20pt;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+
+            caption{
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+
+            table{
+                width: 100%;
+                background-color: rgba(3, 3, 4, 0.5);
+                margin-left: 10%;
+                margin-right: 10%;
+                color: whitesmoke;
+                border: solid 3px rgba(217, 210, 196, 0.7);
+            }
+
+            section{
+                width: 20%;
+                margin-top: 5%;
+                margin-left: 38%;
+                margin-right: 38%;
+                transform: rotate(-5deg);
+            }
+
+            th, td {
+                padding: 5px 10px;
+                height: 70px;
+            }
+
+            tr:nth-child(odd){
+                background-color: rgb(218, 94, 41, 0.7); 
+            }
+        </style>
     </head>
     
     <body>
         <!--header-->
         <header>
-            <h1>Zetroc's Kitchen</h1>
+            <span class="logo">Zetroc's Kitchen</span>
         </header>
 
-        <!--navigation bar-->
-        <hr />
-        <nav>
-            <p><a href="index.html">Home</a> <a href="menu.html">Menu</a> <a href="contact.html">Contact Us</a></p>
-        </nav>
-        <hr />
+        <div class="page-background">
+            <!--navigation bar-->
+            <nav>
+                <a class="btn" href="index.html">Home</a>
+                <a class="btn" href="menu.html">Menu</a> 
+                <a class="btn" href="contact.html">Contact Us</a>
+            </nav>
 
-        <!--middle content-->
-        <section>
-            <article id="burger">
-                <p>
-                    <strong>Burger and Fries</strong><br />
-                    An American Classic!<br />
-                    Your choice - with or without cheese<br />
-                    Pickle, onion, tomato, and lettuce<br />
-                    Served with our famous thick cut<br />
-                    french fries<br />
-                    $7.95
-                </p>
-            </article>
+            <!--middle content-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 menu-option">
+                        <p>
+                            <span class="top">Burger and Fries</span><br />
+                            An American Classic!<br />
+                            Your choice - with or without cheese<br />
+                            Pickle, onion, tomato, and lettuce<br />
+                            Served with our famous thick cut<br />
+                            french fries<br />
+                            $7.95
+                        </p>
+                    </div>
+                    <div class="col-3 menu-option">
+                        <p>
+                            <span class="top">Hot Dog and Chips</span><br />
+                            A Summer Classic!<br />
+                            Your choice - white or wheat bun<br />
+                            Relish, mustard, and ketchup<br />
+                            Served with our house-made chips<br />
+                            $7.95
+                        </p>
+                    </div>
+                    <div class="col-3 menu-option">
+                        <p>
+                            <span class="top">Italian Sausage and Peppers</span><br />
+                            An All-Time Favorite!<br />
+                            Your choice - mild or spicy Cole Slaw<br />
+                            Served with garlic mashers<br />
+                            $10.95
+                        </p>
+                    </div>
+                </div>
 
-            <article id="hot-dog">
-                <p>
-                    <strong>Hot Dog and Chips</strong><br />
-                    A Summer Classic!<br />
-                    Your choice - white or wheat bun<br />
-                    Relish, mustard, and ketchup<br />
-                    Served with our house-made chips<br />
-                    $7.95
-                </p>
-            </article>
+                <div class="row">
+                    <div class="col-3 menu-option">
+                        <p>
+                            <span class="top">Tenderloin Sandwich and Chips</span><br />
+                            Really Hits the Spot!<br />
+                            Plain or Sesame Seed Bun<br />
+                            Pickle, onion, tomato, and lettuce<br />
+                            Served with our house-made chips<br />
+                            $8.95
+                        </p>
+                    </div>
+                    <div class="col-3 menu-option">
+                        <p>
+                            <span class="top">House Salad</span><br />
+                            On the Lighter Side<br />
+                            Your choice - with or without cheese<br />
+                            Iceberg lettuce, tomatoes, peppers<br />
+                            Thousand Island or Ranch<br />
+                            Dressing served with a dinner roll<br />
+                            $6.95
+                        </p>
+                    </div>
+                    <div class="col-3 menu-option">
+                        <p>
+                            <span class="top">Brisket Sandwich and Fries</span><br />
+                            A Taste of Texas!<br />
+                            Smoked Brisket on thick-cut<br />
+                            Texas Toast<br />
+                            Cole Slaw<br />
+                            Served with our famous thick cut<br />
+                            french fries<br />
+                            $7.95
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <article id="italian-sausage">
-                <p>
-                    <strong>Italian Sausage and Peppers</strong><br />
-                    An All-Time Favorite!<br />
-                    Your choice - mild or spicy Cole Slaw<br />
-                    Served with garlic mashers<br />
-                    $10.95
-                </p>
-            </article>
-
-            <article id="tenderloin-sandwich">
-                <p>
-                    <strong>Tenderloin Sandwich and Chips</strong><br />
-                    Really Hits the Spot!<br />
-                    Plain or Sesame Seed Bun<br />
-                    Pickle, onion, tomato, and lettuce<br />
-                    Served with our house-made chips<br />
-                    $8.95
-                </p>
-            </article>
-
-            <article id="salad">
-                <p>
-                    <strong>House Salad</strong><br />
-                    On the Lighter Side<br />
-                    Your choice - with or without cheese<br />
-                    Iceberg lettuce, tomatoes, peppers<br />
-                    Thousand Island or Ranch<br />
-                    Dressing served with a dinner roll<br />
-                    $6.95
-                </p>
-            </article>
-
-            <article id="brisket-sandwich">
-                <p>
-                    <strong>Brisket Sandwich and Fries</strong><br />
-                    A Taste of Texas!<br />
-                    Smoked Brisket on thick-cut<br />
-                    Texas Toast<br />
-                    Cole Slaw<br />
-                    Served with our famous thick cut<br />
-                    french fries<br />
-                    $7.95
-                </p>
-            </article>
-        </section>
+            <section>
+                <table>
+                    <th colspan="2" class="top">Beverages</th>
+                    <tr>
+                        <td>Root Beer</td>
+                        <td>$3.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bottled Water</td>
+                        <td>$1.25</td>
+                    </tr>
+                    <tr>
+                        <td>Lemonade</td>
+                        <td>$1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Iced Tea</td>
+                        <td>$1.25</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
 
         <!--footer-->
         <footer>
-            <hr />
             <p>322 Bumblebee Ln, Dallas, TX 75201</p>
             <p>214-938-7627</p>
         </footer>
+
+        <!-- CDN links from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
