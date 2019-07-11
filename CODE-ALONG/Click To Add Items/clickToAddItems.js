@@ -53,7 +53,7 @@ function validateItems() {
        document.forms["numberFun"]["num2"].focus();
        return false;
    }
-   document.getElementById("results").style.display = "block";
+   document.getElementsByClassName("container").getElementById("results").style.display = "block";
    document.getElementById("submitButton").innerText = "Recalculate";
    document.getElementById("addResult").innerText = Number(num1) +
                                                      Number(num2);

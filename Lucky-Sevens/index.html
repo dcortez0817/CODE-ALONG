@@ -17,6 +17,7 @@ Most recent revision:
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script type="text/JavaScript" src="luckySevens.js"></script>
     
+        <!--styles the web page-->
         <style>
             body{
                 font-family: cursive;
@@ -30,16 +31,13 @@ Most recent revision:
                 margin-bottom: 3%;
             }
             label{
-                margin-right: 1%;
                 margin-bottom: 1%;
             }
             input{
                 width: 5em;
                 text-align: center;
             }
-            button{
-                margin: 1% 1% 5% 1%;
-            }
+
             .table{
                 text-align: left;
                 opacity: 0.9;
@@ -51,49 +49,56 @@ Most recent revision:
         </style>
     </head>
 
-    <body>
+     <body>
+        <!--places all content in the bootstrap's container class -->
         <div class="container">
-            <h1 style="margin-top: 15%;">Lucky Sevens</h1>
 
-            <form name="luckysevens" onsubmit="return validateItems();" onreset="resetForm();">
-                <div class="form-row">
-                    <div class="col">
-                        <label for="starting-bet" id="starting-bet">Starting Bet: </label>
-                        <input type="text" class="form-control-inline" placeholder="$0.00">
-                    </div>
+            <div class="row">
+                <div class="col-3"></div>
+
+                <div class="col-6" style="margin-top: 15%;">
+                    <h1>Lucky Sevens</h1>
+                    <form name="luckysevens" onsubmit="return play();" onreset="resetForm();">
+                        <label for="startingBet" style="margin-top: 1%;">Starting Bet: </label>
+                        <input type="number" class="form-control-inline" id="startingBet" step=".01" placeholder="$0.00"/><br />
+                           
+                        <button type="submit" id="submitButton" class="btn btn-default" style="margin: 3% 1% 5% 1%;">Play</button>
+                        <button type="reset" id="resetButton" class="btn btn-default" style="display:none; margin: 3% 1% 5% 1%;">Play Again</button>
+                    </form>
                 </div>
 
-                <button type="submit" id="submitButton" class="btn btn-default">Play</button>
-                <button type="reset" id="resetButton" class="btn btn-default">Reset</button>
-            </form>
+                <div class="col-3"></div>
+            </div>
+
             
-            <div style="display:none;">
-                <hr style="border-color: whitesmoke;" />
-                <h1>Results</h1>
-            
+            <!-- hides results until the game ends -->
+            <div style="display:none;" id="results">            
                 <div class="row">
                     <div class="col-3"></div>
 
                     <div class="col-6">
+                        <hr style="border-color: whitesmoke;" />
+                        <h1>Results</h1>
+
                         <table id="results" class="table" >
                             <thead class="thead-dark">
                                 <tr>
                                     <th>Starting Bet</th>
-                                    <th>$####.##</th>
+                                    <th>$<span id="startingBet"></span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Total Rolls Before Going Broke</td>
-                                    <td><span id="addResult"></span>#</td>
+                                    <td><span id="rollCount"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Highest Amount Won</td>
-                                    <td><span id="subtractResult"></span>$####.##</td>
+                                    <td>$<span id="highestAmountWon"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Roll Count At Highest Amount Won</td>
-                                    <td><span id="multiplyResult"></span>###</td>
+                                    <td><span id="highestRollCount"></span></td>
                                 </tr>
                             </tbody>
                         </table>
