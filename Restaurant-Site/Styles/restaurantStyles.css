@@ -16,18 +16,21 @@ header, footer{
 
  nav{
     text-align: left;
+    margin-left: 2%;
 }
 
 nav .btn {
-    font-size: 10pt;
-    background-color: rgb(218, 94, 41, 0.7);
+    font-size: 11pt;
+    font-family: cursive;
+    background-color: rgba(3, 3, 4, 0.5);
     color: whitesmoke;
-    margin: 2% 1% 0 1%;
+    margin-top: 2%;
     width: 10em;   
 }
 
 nav .btn:visited {
-    color: purple;
+    font-weight: normal;
+    color: rgba(218, 94, 41, 0.7);
 }
 
 nav .btn:hover {
@@ -38,7 +41,7 @@ nav .btn:hover {
 nav .btn:active {
     font-weight: normal;
     color: whitesmoke;
-    background-color: rgba(3, 3, 4, 0.5);
+    background-color: rgba(218, 94, 41, 0.7); 
 }
 
 body{
@@ -62,4 +65,11 @@ body{
     color: rgb(3, 3, 4, 0.5);
     background-color: rgba(217, 210, 196, 0.2);
     padding: 1%;
+}
+
+.carousel{
+    background-color: rgba(218, 94, 41, 0.7);
+    width: 100%;
+    text-align: center;
+    border-bottom: whitesmoke solid;
 }

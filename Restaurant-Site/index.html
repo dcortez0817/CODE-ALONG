@@ -15,10 +15,12 @@ Most recent revision:
         
         <!-- Bootstrap CDN from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
         <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
+        <script type="text/JavaScript" src="Scripts/restaurantScripts.js"></script>
         <style>
             .description{
-                background-color: rgb(218, 94, 41, 0.7);
+                background-color: rgba(218, 94, 41, 0.7);
                 border-radius: 5%;
                 padding: 2%;
             }
@@ -32,20 +34,37 @@ Most recent revision:
             
             <!--navigation bar-->
             <nav>
-                <a class="btn" href="index.html"><span class="glyphicon glyphicon-home"></span>Home</a>
+                <a class="btn" href="index.html"><i class="octicon octicon-home"></i></a>
                 <a class="btn" href="menu.html">Menu</a> 
                 <a class="btn" href="contact.html">Contact Us</a>
             </nav>
         </header>
 
-        <div class="page-background" >            
+        <div class="page-background">
+            <!-- adds carousel to show special annoucements -->
+            <div class="carousel slide" data-ride="carousel" data-interval="2500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h5>We're opening a new location!</h5>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h5>We're rolling out our seasonal menu, with special options for this season.</h5>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h5>The Drink of the Month is SG Special Brew.</h5>
+                    </div>
+                </div>
+            </div>
+
             <!--middle content-->
             <div class="container">
                 <div class="row">
                     <div class="col-1"></div>
                 <!--free usage of image from this site: https://pxhere.com/en/photo/39121-->
                     <div class="col-10">
-                        <img src="Images/cover-image.jpg" class="img-fluid" style="border-color: whitesmoke; border: solid .7em; margin-top: 10%;"/>
+                        <img src="Images/cover-image.jpg" class="img-fluid" style="border-color: whitesmoke; border: solid .7em; margin-top: 8%;"/>
                     </div>
                     <div class="col-1"></div>
                 </div>
@@ -56,14 +75,13 @@ Most recent revision:
                         <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><em>Our Story</em></h2>
                         <p>
                             It all started in the summer of 2005. As twenty year old college student Douglas Zetroc moseyed around the big city of Dallas
-                            with some friends in search of a hangout spot, it occurred to him that there weren't many restaurants that were suitable for
-                            multiple parts of the day. He had this big idea to open a restaurant to offer a multipurpose menu and environment, but did not
-                            have any idea where to begin. So he turned to his childhood buddies and his parents to make his dream a reality, and a year later
-                            arose the great spot known as Zetroc's!
+                            with some friends, it occurred to him that there weren't many restaurants suitable for multiple parts of the day. 
+                            He had this big idea to open a restaurant to offer a multipurpose menu and environment, but had no idea where to begin. 
+                            So he turned to his childhood buddies and parents to make his dream a reality, and a year later arose the great spot known as Zetroc's!
                         </p>
                         <p>
-                            Named after it's founder, Douglas Zetroc, Zetroc's presents itself as an old fashioned diner by day and a social spot by night!
-                            Making it fitting for all ages or functions. Whether it be a lunch break, brunch date, or dinner event &ndash; Zetroc's is your spot! 
+                            Zetroc's presents itself as an old fashioned diner by day and a social spot by night!
+                            Making it fitting for all ages or functions. Whether it be a brunch break, lunch date, or dinner event &ndash; Zetroc's is your place! 
                             From our <em>American Classic </em> burger to our <em>All-Time Favorite</em> Italian Sausage and Peppers dish, our menu offers a variety 
                             of rich-in-flavor meals that will surely satisfy your taste buds. Even our house salad has some swagger to it.
                         </p>
@@ -81,6 +99,16 @@ Most recent revision:
                 </div>
             </div>
         </div>
+
+        <!-- tells users that have javascript disabled to enable it -->
+        <noscript>
+            <div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert" id="dissmissButton">
+                This site is best viewed with <strong>JavaScript</strong> enabled.
+                <button type="button"  class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </noscript>
 
         <!--footer-->
         <footer>
